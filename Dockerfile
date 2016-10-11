@@ -50,6 +50,3 @@ RUN chown -R odoo /opt/odoo/*
 # Execution environment
 USER odoo
 CMD /opt/odoo/files/odoo/odoo -c /opt/odoo/etc/odoo.conf
-RUN pip install simplejson lxml pytz psycopg2 werkzeug pyyaml mako platypus unittest2 reportlab decorator pillow requests 
-RUN pip install jinja2 pyPdf passlib psutil
-RUN apt-get install python-dateutil python-pychart python-decorator python-docutils python-passlib python-openid python-babel
