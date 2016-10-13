@@ -18,7 +18,7 @@ function login  {
     if [[ ! -e $1 && $1 = "root" ]]; then
         /bin/bash
     else
-        sudo su - odoo
+        sudo su - odoo8
     fi
     SERVICE_PID=$!
     set -e
@@ -30,7 +30,7 @@ function start {
     if [ ! -e $1 ]; then
         echo "...with additional args: $*"
     fi
-    sudo -i -u odoo /usr/bin/python \
+    sudo -i -u odoo8 /usr/bin/python \
                     /opt/odoo/sources/odoo/openerp-server \
                     -c $file \
                     $*
@@ -55,7 +55,7 @@ else
     file=$ODOO_CONF
 fi
 
-chown -R odoo /opt/odoo
+chown -R odoo8 /opt/odoo
 echo "Running command..."
 for arg in "$*"
 do
