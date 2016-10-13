@@ -19,12 +19,12 @@ RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/
 
 RUN pip install --upgrade setuptools
 RUN pip install --upgrade pip
-ADD sources/requirements10.txt /opt/sources/requirements.txt
+ADD sources/requirements10.txt /opt/sources/requirements10.txt
 # use wheels from our public wheelhouse for proper versions of listed packages
 # as described in sourced pip-req.txt
 # these are python dependencies for odoo and "apps" as precompiled wheel packages
 
-RUN pip install --upgrade --force-reinstall -r /opt/sources/requirements.txt
+RUN pip install --upgrade --force-reinstall -r /opt/sources/requirements10.txt
 
 RUN pip install paramiko erppeek
 
