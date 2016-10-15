@@ -18,7 +18,7 @@ function login  {
     if [[ ! -e $1 && $1 = "root" ]]; then
         /bin/bash
     else
-        sudo su - odoo8
+        sudo su - odoo
     fi
     SERVICE_PID=$!
     set -e
