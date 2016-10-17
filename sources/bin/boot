@@ -30,7 +30,7 @@ function start {
     if [ ! -e $1 ]; then
         echo "...with additional args: $*"
     fi
-    sudo -i -u odoo8 /usr/bin/python \
+    sudo -i -u odoo /usr/bin/python \
                     /opt/odoo/sources/odoo/odoo \
                     -c $file \
                     $*
@@ -55,7 +55,7 @@ else
     file=$ODOO_CONF
 fi
 
-chown -R odoo8 /opt/odoo
+chown -R odoo /opt/odoo
 echo "Running command..."
 for arg in "$*"
 do
