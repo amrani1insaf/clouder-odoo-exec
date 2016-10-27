@@ -49,4 +49,4 @@ RUN chown -R odoo /opt/odoo/*
 
 # Execution environment
 USER odoo
-CMD /opt/odoo/files/odoo/odoo -c /opt/odoo/etc/odoo.conf
+CMD /opt/odoo/files/odoo/openerp-server -c /opt/odoo/etc/odoo.conf
