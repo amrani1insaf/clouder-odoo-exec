@@ -48,5 +48,5 @@ RUN chown -R odoo /opt/odoo/*
 #RUN chown -R odoo /opt/odoo/data
 
 # Execution environment
-USER odoo
+
 CMD /opt/odoo/files/odoo/odoo -c /opt/odoo/etc/odoo.conf
