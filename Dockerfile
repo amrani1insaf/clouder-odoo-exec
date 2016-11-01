@@ -41,9 +41,9 @@ RUN dpkg -i /opt/sources/wkhtmltox.deb
 # Add ADDONS-PATH
 #COPY ./odoo-server.conf /etc/odoo/
 #RUN chown odoo /etc/odoo/odoo-server.conf
-RUN mkdir -p /mnt/extra-addons \
-        && chown -R odoo /mnt/extra-addons
-VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
+#RUN mkdir -p /mnt/extra-addons \
+#        && chown -R odoo /mnt/extra-addons
+#VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 
 ADD sources/bin /app/bin/
 # create the odoo user
