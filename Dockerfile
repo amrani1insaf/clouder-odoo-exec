@@ -39,8 +39,11 @@ RUN easy_install -UZ py3o.template==0.9.5
 ADD http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb /opt/sources/wkhtmltox.deb
 RUN dpkg -i /opt/sources/wkhtmltox.deb
 # Add ADDONS-PATH
-COPY ./odoo-server.conf /etc/odoo/
-RUN chown odoo /etc/odoo/odoo-server.conf
+#COPY ./odoo-server.conf /etc/odoo/
+#RUN chown odoo /etc/odoo/odoo-server.conf
+RUN mkdir -p /mnt/extra-addons \
+        && chown -R odoo /mnt/extra-addons
+VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 
 ADD sources/bin /app/bin/
 # create the odoo user
