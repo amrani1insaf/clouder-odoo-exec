@@ -53,6 +53,7 @@ RUN mkdir -p /opt/odoo/etc
 RUN mkdir -p /opt/odoo/extra-addons
 RUN mkdir -p /opt/odoo/var
 RUN chown -R odoo /opt/odoo/*
+ADD sources/odoo.conf /opt/odoo/etc/odoo.conf
 #RUN chown -R odoo /opt/odoo/etc
 #RUN chown -R odoo /opt/odoo/extra-addons
 #RUN chown -R odoo /opt/odoo/data
